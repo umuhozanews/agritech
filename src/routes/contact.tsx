@@ -4,10 +4,10 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Community — Neofarm" },
-      { name: "description", content: "Get in touch with Neofarm. Reach our team in Sandtown, California — or connect on Instagram, X, LinkedIn and YouTube." },
-      { property: "og:title", content: "Contact & Community — Neofarm" },
-      { property: "og:description", content: "Talk to our team, join the community, and grow with Neofarm." },
+      { title: "Contact — AgriTech Advisor" },
+      { name: "description", content: "Get in touch with the AgriTech Advisor team. Partner, pilot, or ask about deploying offline-first farming intelligence in Rwanda." },
+      { property: "og:title", content: "Contact — AgriTech Advisor" },
+      { property: "og:description", content: "Talk to the team behind AgriTech Advisor." },
     ],
   }),
   component: Contact,
@@ -19,12 +19,12 @@ function Contact() {
     <>
       <section className="border-b border-border bg-background">
         <div className="mx-auto max-w-7xl px-6 py-24">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary/70">Contact & Community</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary/70">Contact</p>
           <h1 className="mt-3 max-w-3xl text-5xl font-bold leading-[1.05] md:text-7xl">
-            Let's grow <span className="text-accent-foreground bg-accent px-3 rounded-lg">something</span> together.
+            Let's empower <span className="text-accent-foreground bg-accent px-3 rounded-lg">farmers</span> together.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-            We deliver naturally grown, chemical-free food while promoting eco-friendly farming. Reach out to invest, partner, or just talk shop.
+            Partner with us to pilot, deploy, or extend AgriTech Advisor across Rwanda and beyond. Available in English, Français, and Kinyarwanda.
           </p>
         </div>
       </section>
@@ -35,13 +35,13 @@ function Contact() {
           <div className="space-y-8">
             <div className="rounded-3xl border border-border bg-card p-8">
               <h3 className="text-sm font-semibold uppercase tracking-widest text-primary/70">Support</h3>
-              <p className="mt-4 font-display text-2xl font-semibold">+1 (415) 555-0142</p>
-              <p className="mt-1 text-sm text-muted-foreground">Mon–Fri, 7am–6pm PT</p>
+              <p className="mt-4 font-display text-2xl font-semibold">hello@agritechadvisor.rw</p>
+              <p className="mt-1 text-sm text-muted-foreground">Mon–Fri, 8am–6pm CAT</p>
             </div>
             <div className="rounded-3xl border border-border bg-card p-8">
-              <h3 className="text-sm font-semibold uppercase tracking-widest text-primary/70">Visit</h3>
-              <p className="mt-4 font-display text-xl font-semibold">1420 Harvest Lane</p>
-              <p className="text-muted-foreground">Sandtown, California 94132</p>
+              <h3 className="text-sm font-semibold uppercase tracking-widest text-primary/70">Based in</h3>
+              <p className="mt-4 font-display text-xl font-semibold">Kigali, Rwanda</p>
+              <p className="text-muted-foreground">Serving smallholder farmers nationwide</p>
             </div>
             <div className="rounded-3xl bg-primary p-8 text-primary-foreground">
               <h3 className="text-sm font-semibold uppercase tracking-widest text-accent">Follow along</h3>
@@ -75,9 +75,9 @@ function Contact() {
               <label className="block sm:col-span-2">
                 <span className="mb-2 block text-sm font-medium">I'm interested in</span>
                 <select className="w-full rounded-xl border border-input bg-background px-4 py-3 outline-none focus:border-primary focus:ring-2 focus:ring-accent/40">
-                  <option>Deploying Neofarm on my land</option>
-                  <option>Investing in sustainable farms</option>
-                  <option>Partnering as an organization</option>
+                  <option>Piloting AgriTech Advisor with a farmer cooperative</option>
+                  <option>Integrating ESP32 soil sensors</option>
+                  <option>Partnering as an NGO or government agency</option>
                   <option>Something else</option>
                 </select>
               </label>
