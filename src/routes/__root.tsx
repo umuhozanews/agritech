@@ -26,7 +26,7 @@ function NotFoundComponent() {
             to="/"
             className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Back to Neofarm
+            Back to AgriTech Advisor
           </Link>
         </div>
       </div>
@@ -69,11 +69,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Neofarm — Smart Farming for Future Generations" },
-      { name: "description", content: "AI-driven agritech that helps farmers optimize land, water, and yield with data-driven insights and transparent finance tools." },
-      { name: "author", content: "Neofarm" },
-      { property: "og:title", content: "Neofarm — Smart Farming for Future Generations" },
-      { property: "og:description", content: "AI-driven agritech that helps farmers optimize land, water, and yield." },
+      { title: "AgriTech Advisor — Smart Farming Intelligence, Even Without Internet" },
+      { name: "description", content: "Offline-first agritech helping Rwandan smallholder farmers diagnose crops, monitor soil, forecast weather, and sell smarter." },
+      { name: "author", content: "AgriTech Advisor" },
+      { property: "og:title", content: "AgriTech Advisor — Smart Farming Intelligence" },
+      { property: "og:description", content: "Offline-first agritech for Rwandan smallholder farmers." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -115,15 +115,15 @@ function SiteHeader() {
               <path d="M12 2c-4 6-4 12 0 20"/><path d="M12 12c4-2 8-2 10 0"/><path d="M12 12c-4-2-8-2-10 0"/>
             </svg>
           </span>
-          <span className="font-display text-lg font-semibold tracking-tight">Neofarm</span>
+          <span className="font-display text-lg font-semibold tracking-tight">AgriTech Advisor</span>
         </Link>
         <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
           <Link to="/" activeOptions={{ exact: true }} activeProps={{ className: "text-primary" }} className="text-foreground/70 transition hover:text-foreground">Home</Link>
-          <Link to="/about" activeProps={{ className: "text-primary" }} className="text-foreground/70 transition hover:text-foreground">About & Solutions</Link>
+          <Link to="/about" activeProps={{ className: "text-primary" }} className="text-foreground/70 transition hover:text-foreground">Features</Link>
           <Link to="/contact" activeProps={{ className: "text-primary" }} className="text-foreground/70 transition hover:text-foreground">Contact</Link>
         </nav>
         <Link to="/contact" className="hidden rounded-full bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground shadow-sm transition hover:brightness-95 sm:inline-flex">
-          Start Investing
+          Learn More
         </Link>
       </div>
     </header>
@@ -141,18 +141,19 @@ function SiteFooter() {
                 <path d="M12 2c-4 6-4 12 0 20"/><path d="M12 12c4-2 8-2 10 0"/><path d="M12 12c-4-2-8-2-10 0"/>
               </svg>
             </span>
-            <span className="font-display text-lg font-semibold">Neofarm</span>
+            <span className="font-display text-lg font-semibold">AgriTech Advisor</span>
           </div>
           <p className="mt-4 max-w-md text-sm text-primary-foreground/70">
-            We deliver naturally grown, chemical-free food while promoting eco-friendly farming — powered by AI, guided by tradition.
+            Empowering Rwandan Farmers — offline-first smart farming intelligence for diagnosis, sensing, weather, and market.
           </p>
         </div>
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/50">Explore</h4>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><Link to="/" className="hover:text-accent">Home</Link></li>
-            <li><Link to="/about" className="hover:text-accent">About & Solutions</Link></li>
-            <li><Link to="/contact" className="hover:text-accent">Contact</Link></li>
+            <li><Link to="/about" className="hover:text-accent">Features</Link></li>
+            <li><Link to="/about" className="hover:text-accent">How It Works</Link></li>
+            <li><Link to="/about" className="hover:text-accent">Tech Stack</Link></li>
+            <li><Link to="/about" className="hover:text-accent">Timeline</Link></li>
           </ul>
         </div>
         <div>
@@ -166,7 +167,7 @@ function SiteFooter() {
       </div>
       <div className="border-t border-primary-foreground/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-xs text-primary-foreground/60 sm:flex-row">
-          <p>© {new Date().getFullYear()} Neofarm. Cultivating tomorrow.</p>
+          <p>© 2025 AgriTech Advisor. Built with Flutter & Claude AI.</p>
           <div className="flex gap-4">
             <a href="#" aria-label="Instagram" className="hover:text-accent">Instagram</a>
             <a href="#" aria-label="X" className="hover:text-accent">X</a>
