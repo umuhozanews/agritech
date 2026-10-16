@@ -121,11 +121,18 @@ function SiteHeader() {
         <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
           <Link to="/" activeOptions={{ exact: true }} activeProps={{ className: "text-primary" }} className="text-foreground/70 transition hover:text-foreground">Home</Link>
           <Link to="/about" activeProps={{ className: "text-primary" }} className="text-foreground/70 transition hover:text-foreground">Features</Link>
-          <Link to="/contact" activeProps={{ className: "text-primary" }} className="text-foreground/70 transition hover:text-foreground">Contact</Link>
+          <a href="https://agritech-mobile-app.vercel.app" target="_blank" rel="noopener noreferrer" className="text-foreground/70 transition hover:text-foreground">Live App Demo</a>
         </nav>
-        <Link to="/contact" className="hidden rounded-full bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground shadow-sm transition hover:brightness-95 sm:inline-flex">
-          Learn More
-        </Link>
+        <a
+          href="https://github.com/umuhozanews/agritech/releases/download/v1.0.0/AgriTech-Advisor-v1.0.0.apk"
+          className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground shadow-sm transition hover:brightness-95"
+          download
+        >
+          <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span>Download APK</span>
+        </a>
       </div>
     </header>
   );
