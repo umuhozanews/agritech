@@ -4,10 +4,19 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — AgriTech Advisor" },
-      { name: "description", content: "Get in touch with the AgriTech Advisor team. Partner, pilot, or ask about deploying offline-first farming intelligence in Rwanda." },
-      { property: "og:title", content: "Contact — AgriTech Advisor" },
-      { property: "og:description", content: "Talk to the team behind AgriTech Advisor." },
+      { title: "Contact AgriTech Advisor — Pilot & Partner in Rwanda" },
+      { name: "description", content: "Partner with AgriTech Advisor to pilot offline-first smart agriculture solutions for cooperatives, NGOs, and farmers across Rwanda. Reach out to our team in Kigali." },
+      { property: "og:title", content: "Contact AgriTech Advisor — Pilot & Partner in Rwanda" },
+      { property: "og:description", content: "Partner with AgriTech Advisor to pilot offline-first smart agriculture solutions for cooperatives, NGOs, and farmers across Rwanda." },
+      { property: "og:url", content: "https://kacci.oryntechltd.com/contact" },
+      { property: "og:image", content: "https://kacci.oryntechltd.com/og-image.jpg" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Contact AgriTech Advisor — Pilot & Partner in Rwanda" },
+      { name: "twitter:description", content: "Get in touch with the team behind AgriTech Advisor in Kigali, Rwanda." },
+      { name: "twitter:image", content: "https://kacci.oryntechltd.com/og-image.jpg" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://kacci.oryntechltd.com/contact" },
     ],
   }),
   component: Contact,

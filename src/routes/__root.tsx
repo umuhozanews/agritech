@@ -69,13 +69,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+      { name: "author", content: "AgriTech Advisor" },
       { title: "AgriTech Advisor — Smart Farming Intelligence, Even Without Internet" },
       { name: "description", content: "Offline-first agritech helping Rwandan smallholder farmers diagnose crops, monitor soil, forecast weather, and sell smarter." },
-      { name: "author", content: "AgriTech Advisor" },
-      { property: "og:title", content: "AgriTech Advisor — Smart Farming Intelligence" },
-      { property: "og:description", content: "Offline-first agritech for Rwandan smallholder farmers." },
+      { property: "og:site_name", content: "AgriTech Advisor" },
+      { property: "og:locale", content: "en_US" },
       { property: "og:type", content: "website" },
+      { property: "og:title", content: "AgriTech Advisor — Smart Farming Intelligence" },
+      { property: "og:description", content: "Offline-first agritech for Rwandan smallholder farmers. Diagnose, monitor, forecast, and sell smarter." },
+      { property: "og:image", content: "https://kacci.oryntechltd.com/og-image.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "AgriTech Advisor — Smart Farming Intelligence in Rwanda" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "AgriTech Advisor — Smart Farming Intelligence" },
+      { name: "twitter:description", content: "Offline-first agritech for Rwandan smallholder farmers." },
+      { name: "twitter:image", content: "https://kacci.oryntechltd.com/og-image.jpg" },
+      { name: "twitter:image:alt", content: "AgriTech Advisor — Smart Farming Intelligence in Rwanda" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -121,7 +132,8 @@ function SiteHeader() {
         <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
           <Link to="/" activeOptions={{ exact: true }} activeProps={{ className: "text-primary" }} className="text-foreground/70 transition hover:text-foreground">Home</Link>
           <Link to="/about" activeProps={{ className: "text-primary" }} className="text-foreground/70 transition hover:text-foreground">Features</Link>
-          <a href="https://agritech-mobile-app.vercel.app" target="_blank" rel="noopener noreferrer" className="text-foreground/70 transition hover:text-foreground">Live App Demo</a>
+          <Link to="/contact" activeProps={{ className: "text-primary" }} className="text-foreground/70 transition hover:text-foreground">Contact</Link>
+          <a href="https://agritech-mobile-app.pages.dev" target="_blank" rel="noopener noreferrer" className="text-foreground/70 transition hover:text-foreground">Live App Demo</a>
         </nav>
         <a
           href="https://github.com/umuhozanews/agritech/releases/download/v1.0.0/AgriTech-Advisor-v1.0.0.apk"
@@ -158,10 +170,10 @@ function SiteFooter() {
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/50">Explore</h4>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><Link to="/about" className="hover:text-accent">Features</Link></li>
-            <li><Link to="/about" className="hover:text-accent">How It Works</Link></li>
-            <li><Link to="/about" className="hover:text-accent">Tech Stack</Link></li>
-            <li><Link to="/about" className="hover:text-accent">Timeline</Link></li>
+            <li><Link to="/about" className="hover:text-accent">Features & Roadmap</Link></li>
+            <li><Link to="/contact" className="hover:text-accent">Contact & Support</Link></li>
+            <li><a href="https://agritech-mobile-app.pages.dev" target="_blank" rel="noopener noreferrer" className="hover:text-accent">Live Web App</a></li>
+            <li><a href="/sitemap.xml" className="hover:text-accent">Sitemap</a></li>
           </ul>
         </div>
         <div>

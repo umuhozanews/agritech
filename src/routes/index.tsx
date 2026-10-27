@@ -3,13 +3,62 @@ import heroImg from "../assets/hero.jpg";
 import aerialImg from "../assets/aerial.jpg";
 import farmersImg from "../assets/farmers.jpg";
 
+const schemaOrgJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://kacci.oryntechltd.com/#organization",
+      "name": "AgriTech Advisor",
+      "url": "https://kacci.oryntechltd.com/",
+      "logo": "https://kacci.oryntechltd.com/og-image.jpg",
+      "email": "hello@agritechadvisor.rw",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kigali",
+        "addressCountry": "RW"
+      },
+      "description": "Offline-first smart farming intelligence empowering smallholder farmers in Rwanda."
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://kacci.oryntechltd.com/#application",
+      "name": "AgriTech Advisor",
+      "applicationCategory": "BusinessApplication, AgriculturalApplication",
+      "operatingSystem": "Android, Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "RWF"
+      },
+      "inLanguage": ["en", "fr", "rw"],
+      "description": "On-device AI crop disease diagnosis, ESP32 soil sensor monitoring, hyperlocal weather advisories, and crowdsourced market prices."
+    }
+  ]
+};
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AgriTech Advisor — Smart Farming Intelligence, Even Without Internet" },
-      { name: "description", content: "Helping smallholder farmers in Rwanda diagnose crops, track weather, monitor soil, and sell smarter — fully offline-first." },
-      { property: "og:title", content: "AgriTech Advisor — Smart Farming Intelligence" },
-      { property: "og:description", content: "Offline-first agritech for Rwandan smallholder farmers. Diagnose, monitor, forecast, and sell smarter." },
+      { title: "AgriTech Advisor — Smart Farming Intelligence in Rwanda" },
+      { name: "description", content: "Offline-first agricultural intelligence empowering Rwandan smallholder farmers with on-device AI crop disease diagnosis, ESP32 soil sensing, hyperlocal weather advisories, and crowdsourced market prices." },
+      { property: "og:title", content: "AgriTech Advisor — Smart Farming Intelligence in Rwanda" },
+      { property: "og:description", content: "Offline-first agricultural intelligence empowering Rwandan smallholder farmers with on-device AI crop disease diagnosis, ESP32 soil sensing, and real-time market trends." },
+      { property: "og:url", content: "https://kacci.oryntechltd.com/" },
+      { property: "og:image", content: "https://kacci.oryntechltd.com/og-image.jpg" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "AgriTech Advisor — Smart Farming Intelligence in Rwanda" },
+      { name: "twitter:description", content: "Offline-first smart farming intelligence for diagnosis, soil sensors, weather forecasts, and market trends." },
+      { name: "twitter:image", content: "https://kacci.oryntechltd.com/og-image.jpg" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://kacci.oryntechltd.com/" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(schemaOrgJsonLd),
+      },
     ],
   }),
   component: Home,
@@ -37,7 +86,7 @@ function Home() {
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Smart tractor at sunset in a green field" className="h-full w-full object-cover" width={1920} height={1200} />
+          <img src={heroImg} alt="Smart agricultural tractor cultivating crops at sunset in Rwandan farmland" className="h-full w-full object-cover" width={1920} height={1200} />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30" />
         </div>
         <div className="relative mx-auto flex min-h-[86vh] max-w-7xl flex-col justify-center px-6 py-24 text-primary-foreground">
@@ -63,7 +112,7 @@ function Home() {
               <span>Download Android APK (111MB)</span>
             </a>
             <a
-              href="https://agritech-mobile-app.vercel.app"
+              href="https://agritech-mobile-app.pages.dev"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 bg-primary-foreground/5 px-6 py-3 text-sm font-semibold backdrop-blur transition hover:bg-primary-foreground/15"
@@ -116,7 +165,7 @@ function Home() {
           </div>
           <div className="relative">
             <div className="overflow-hidden rounded-3xl">
-              <img src={aerialImg} alt="Aerial view of Rwandan farmland" width={1400} height={1000} loading="lazy" className="h-full w-full object-cover" />
+              <img src={aerialImg} alt="Aerial view of Rwandan terraced farmland plots" width={1400} height={1000} loading="lazy" className="h-full w-full object-cover" />
             </div>
             <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-border bg-card p-5 shadow-xl sm:block">
               <div className="text-xs uppercase tracking-widest text-muted-foreground">On-device AI</div>
@@ -143,7 +192,7 @@ function Home() {
             </div>
           </div>
           <div className="overflow-hidden rounded-3xl">
-            <img src={farmersImg} alt="Rwandan farmers reviewing crop data" width={1400} height={1000} loading="lazy" className="h-full w-full object-cover" />
+            <img src={farmersImg} alt="Rwandan smallholder farmers collaborating and reviewing real-time crop data" width={1400} height={1000} loading="lazy" className="h-full w-full object-cover" />
           </div>
         </div>
       </section>

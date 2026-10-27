@@ -7,9 +7,18 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "Features & Roadmap — AgriTech Advisor" },
-      { name: "description", content: "Six modules, three languages, one offline-first app. See how AgriTech Advisor helps Rwandan smallholder farmers, phase by phase." },
+      { name: "description", content: "Explore the six offline-first modules of AgriTech Advisor: AI crop disease detection, ESP32 soil sensor pairing, hyperlocal weather forecasts, crowdsourced market prices, and farm task management." },
       { property: "og:title", content: "Features & Roadmap — AgriTech Advisor" },
-      { property: "og:description", content: "Explore the six modules and the phase-by-phase roadmap behind AgriTech Advisor." },
+      { property: "og:description", content: "Explore the six offline-first modules and the phase-by-phase roadmap behind AgriTech Advisor." },
+      { property: "og:url", content: "https://kacci.oryntechltd.com/about" },
+      { property: "og:image", content: "https://kacci.oryntechltd.com/og-image.jpg" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Features & Roadmap — AgriTech Advisor" },
+      { name: "twitter:description", content: "Explore the six offline-first modules and the phase-by-phase roadmap behind AgriTech Advisor." },
+      { name: "twitter:image", content: "https://kacci.oryntechltd.com/og-image.jpg" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://kacci.oryntechltd.com/about" },
     ],
   }),
   component: About,
@@ -45,7 +54,7 @@ function About() {
       {/* Hero */}
       <section className="relative overflow-hidden bg-primary text-primary-foreground">
         <div className="absolute inset-0 opacity-25">
-          <img src={sproutImg} alt="" className="h-full w-full object-cover" width={1200} height={1400} />
+          <img src={sproutImg} alt="Close-up of vibrant green plant sprout growing in healthy rich soil" className="h-full w-full object-cover" width={1200} height={1400} />
         </div>
         <div className="relative mx-auto max-w-7xl px-6 py-28 md:py-36">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">Features & Roadmap</p>
@@ -81,10 +90,10 @@ function About() {
         <div className="mx-auto max-w-7xl px-6 py-24">
           <div className="grid gap-6 md:grid-cols-3">
             <div className="row-span-2 overflow-hidden rounded-3xl">
-              <img src={farmersImg} alt="Rwandan farmers using the app" width={1400} height={1000} loading="lazy" className="h-full w-full object-cover" />
+              <img src={farmersImg} alt="Rwandan smallholder farmers collaborating and reviewing real-time crop data" width={1400} height={1000} loading="lazy" className="h-full w-full object-cover" />
             </div>
             <div className="overflow-hidden rounded-3xl">
-              <img src={aerialImg} alt="Aerial view of farm plots" width={1400} height={1000} loading="lazy" className="h-full w-full object-cover" />
+              <img src={aerialImg} alt="Aerial panoramic view of agricultural field plots in Rwanda" width={1400} height={1000} loading="lazy" className="h-full w-full object-cover" />
             </div>
             <div className="flex flex-col justify-between rounded-3xl bg-primary p-8 text-primary-foreground">
               <p className="text-sm uppercase tracking-widest text-accent">Our mission</p>
@@ -94,7 +103,7 @@ function About() {
               <p className="mt-6 text-sm text-primary-foreground/70">Designed for Rwanda. Built for scale.</p>
             </div>
             <div className="overflow-hidden rounded-3xl md:col-span-2">
-              <img src={sproutImg} alt="Hands holding a sprout in dark soil" width={1200} height={1400} loading="lazy" className="h-64 w-full object-cover md:h-80" />
+              <img src={sproutImg} alt="Farmer carefully holding young plant sprout in nutrient-rich soil" width={1200} height={1400} loading="lazy" className="h-64 w-full object-cover md:h-80" />
             </div>
           </div>
         </div>
@@ -138,15 +147,16 @@ function About() {
         </div>
       </section>
 
-      {/* Timeline */}
+      {/* Roadmap */}
       <section className="mx-auto max-w-7xl px-6 py-24">
         <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary/70">Timeline</p>
-          <h2 className="mt-3 text-4xl font-bold md:text-5xl">Built phase by phase.</h2>
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary/70">Roadmap</p>
+          <h2 className="mt-3 text-4xl font-bold md:text-5xl">Phased delivery for real-world impact.</h2>
+          <p className="mt-4 text-muted-foreground">Each phase delivers immediate, stand-alone value to farmers.</p>
         </div>
-        <div className="mt-14 grid gap-4 md:grid-cols-2">
+        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {timeline.map((t) => (
-            <div key={t.p} className="flex gap-5 rounded-3xl border border-border bg-card p-6">
+            <div key={t.p} className="flex gap-4 rounded-3xl border border-border bg-card p-6">
               <div className="flex-shrink-0">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary font-display text-sm font-bold text-primary-foreground">
                   ✓
@@ -174,7 +184,7 @@ function About() {
             <span>Download Android APK (111MB)</span>
           </a>
           <a
-            href="https://agritech-mobile-app.vercel.app"
+            href="https://agritech-mobile-app.pages.dev"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full border px-6 py-3 text-sm font-semibold hover:bg-accent hover:text-accent-foreground"

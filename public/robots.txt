@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://kacci.oryntechltd.com/sitemap.xml
